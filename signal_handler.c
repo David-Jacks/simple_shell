@@ -1,14 +1,15 @@
-#include "main.h"
-
-/* This is for handling signals*/
-
-/* CRTL + C*/
+#include "shell.h"
+size_t our_strlen(const char *str);
+/**
+ * signal_handler - handles signals for ctrl c
+ * @signal: signal number
+ * Return: nothing
+ */
 void signal_handler(int signal)
 {
-    char *prompt = "\nShell$ ";
+	char *prompt = "\n$ ";
 
-    (void)signal; /* To prevent the ununsed variable error*/
-    write(1, prompt, strlen(prompt));
-    /* Clear the buffer*/
-    fflush(stdout);
+	(void)signal;
+	write(1, prompt, our_strlen(prompt));
+	fflush(stdout);
 }
