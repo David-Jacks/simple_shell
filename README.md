@@ -1,2 +1,3 @@
-# simple_shellBuilding a simple shell
-A project from Alx_Se
+# Simple Shell Project
+
+ALX Simple Shell project
